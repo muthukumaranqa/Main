@@ -1,23 +1,19 @@
-package week1.day1;
+package testng.practice;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateNewOpportunityS0825 {
-
-	public static void main(String[] args) throws InterruptedException {
+public class TC01_TestNG {
+	@Test
+	public void run() throws InterruptedException {
 		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup();
 		// WebDriverManager.edgedriver().setup();
@@ -30,8 +26,8 @@ public class CreateNewOpportunityS0825 {
 		driver.findElement(By.id("password")).sendKeys("India$321");
 		driver.findElement(By.id("Login")).submit();
 		// Thread.sleep(10000);
-		//WebDriverWait wait = new WebDriverWait(driver, 10);
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='slds-icon-waffle']")));
+		// WebDriverWait wait = new WebDriverWait(driver, 10);
+		// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='slds-icon-waffle']")));
 		driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//button[@class='slds-button']")).click();

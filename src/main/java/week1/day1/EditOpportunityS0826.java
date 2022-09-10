@@ -60,6 +60,7 @@ public class EditOpportunityS0826 {
 		LocalDate localDate = LocalDate.now();
 		LocalDate yesterday = localDate.minusDays(1);
 		System.out.println(localDate);
+		System.out.println(localDate);
 		String dateString = FOMATTER.format(localDate);
 		String dateStringyesterday = FOMATTER.format(yesterday);
 		System.out.println(dateString);
